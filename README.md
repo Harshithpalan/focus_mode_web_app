@@ -1,73 +1,57 @@
-# React + TypeScript + Vite
+# 🧘 Focus Mode Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> "A premium productivity tool designed to help users maintain deep focus and track their work habits."
 
-Currently, two official plugins are available:
+## 🌟 Features
+- **⏱️ Smart Timer:** Adjustable modes for Focus, Short Break, and Long Break sessions.
+- **🧘 Zen Mode:** A fully immersive, distraction-free full-screen experience.
+- **🎵 Ambient Soundscapes:** Integrated audio mixer to drown out background noise (Rain, Forest, White Noise).
+- **📊 Progress Tracking:** Visual statistics including daily focus minutes, session counts, and current streaks.
+- **📅 Focus Heatmap:** GitHub-style contribution graph to visualize your productivity over time.
+- **✨ Modern UI:** Smooth animations powered by Framer Motion and a responsive design using Tailwind CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
+- **React 19**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS 4**
+- **Framer Motion**
+- **Canvas Confetti**
+- **Lucide React**
+- **Firebase** (Integration ready)
 
-## React Compiler
+## 🛠️ Installation & Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Harshithpalan/focus_mode_web_app.git
+   cd focus_mode_web_app
+   ```
 
-## Expanding the ESLint configuration
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Project Structure
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+src/
+├── components/      # Reusable UI components
+│   ├── Audio/       # Sound controls
+│   ├── Calendar/    # Heatmap widget
+│   ├── Stats/       # Daily statistics cards
+│   ├── Theme/       # Dark/Light mode toggle
+│   └── Timer/       # Core timer logic & display
+├── hooks/           # Custom React hooks (useTimer, useAudio, usePersistence)
+└── App.tsx          # Main application entry
 ```
