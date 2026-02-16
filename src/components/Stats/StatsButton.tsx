@@ -4,10 +4,10 @@ import styled from 'styled-components';
 interface StatsButtonProps {
   label: string;
   value: string;
-  icon: React.ReactNode;
+  icon: any;
 }
 
-const StatsButton: React.FC<StatsButtonProps> = ({ label, value, icon }) => {
+const StatsButton = ({ label, value, icon }: StatsButtonProps): React.JSX.Element => {
   return (
     <StyledWrapper>
       <button className="button">

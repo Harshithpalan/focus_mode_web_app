@@ -62,7 +62,7 @@ const AmbientButton: React.FC<AmbientButtonProps> = ({
                 )}
             />
             <div className="relative z-10 w-7 h-7 flex items-center justify-center">
-                {React.cloneElement(children as React.ReactElement, {
+                {React.cloneElement(children as React.ReactElement<any>, {
                     className: cn(
                         "w-full h-full fill-current transition-colors duration-300",
                         variant === 'white' && "text-white group-hover:text-white/90",

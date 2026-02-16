@@ -7,7 +7,7 @@ interface DailyStatsProps {
     streak: number;
 }
 
-const DailyStats: React.FC<DailyStatsProps> = ({ totalMinutes, sessionsCompleted, streak }) => {
+const DailyStats = ({ totalMinutes, sessionsCompleted, streak }: DailyStatsProps): React.JSX.Element => {
     const stats = [
         { label: 'Focus Time', value: `${Math.round(totalMinutes)}m`, icon: '⏱️' },
         { label: 'Sessions', value: sessionsCompleted.toString(), icon: '✅' },
@@ -16,7 +16,7 @@ const DailyStats: React.FC<DailyStatsProps> = ({ totalMinutes, sessionsCompleted
 
     return (
         <section className="grid grid-cols-3 gap-4 w-full">
-            {stats.map((stat, index) => (
+            {stats.map((stat) => (
                 <StatsButton
                     key={stat.label}
                     label={stat.label}
